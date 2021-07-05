@@ -33,7 +33,7 @@ void printPrimes(int p[]){
             // very tricky!!
             //the last pipe(write from the last but one and read from the last) is empty.
             //to return 0 from read syscall of the last process,it must make write end of the pipe close. 
-            //close(1);
+            close(1);
             wait(0);
             exit(0);
         }
